@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #181818;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: ivory;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
