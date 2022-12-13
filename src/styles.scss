@@ -1,9 +1,11 @@
 body {
-    background-color: #181818;
+    background-color: #111;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: ivory;
+    color: #FFFDFA;
 }
 
 textarea:focus, input:focus{
     outline: none;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

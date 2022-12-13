@@ -13,7 +13,7 @@ enum Options {
 })
 export class AppComponent implements OnInit{
 	public options = Options;
-	private option: Options = Options.feature;
+	public option: Options = Options.feature;
 	public branch: string = '';
 	public result: string = ``;
 	public otherText: string = '';

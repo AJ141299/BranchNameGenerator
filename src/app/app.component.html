@@ -1,25 +1,14 @@
-<div>
-    <h1><span class="title-highlight">Branch Name</span> Generator</h1>
-    <input (input)="setBranch($event.target)" placeholder="Branch name..." type="text">
-    <div class="options">
-        <div>
-            <input (change)="setOption($event.target)" type="radio" id="feature" name="drone" [value]="options.feature"
-            checked>
-            <label for="feature">Feature</label>
-        </div>
-        <div>
-            <input (change)="setOption($event.target)" type="radio" id="bugfix" name="drone" [value]="options.bugfix">
-            <label for="bugfix">Bugfix</label>
-        </div>
-        <div>
-            <input (change)="setOption($event.target)" type="radio" id="other" name="drone" [value]="options.other">
-            <label for="other">
-                <input (input)="setOtherText($event.target)" type="text" name="other" id="other-text">
-            </label>
-        </div>
-    </div>
-    <div>
-        <input disabled [value]="result" placeholder="Result" type="text">
-        <button (click)=(copyToClipboard(result))>Copy</button>
-    </div>
-</div>
+<main>
+    <h1 class="title"><span class="title-highlight">Branch Name</span> Generator</h1>
+    <section>
+        <input class="extend-width" (input)="setBranch($event.target)" placeholder="Branch name..." type="text">
+        <mat-radio-group [(ngModel)]="option" class="options">
+            <mat-radio-button [value]="options.feature" [checked]="true">Feature</mat-radio-button>
+            <mat-radio-button [value]="options.bugfix">Bugfix</mat-radio-button>
+            <mat-radio-button [value]="options.other">Other</mat-radio-button>
+            <input (input)="setOtherText($event.target)" placeholder="Other..." type="text" name="other" id="other-text">
+        </mat-radio-group>
+        <input class="extend-width" disabled [value]="result" placeholder="Result..." type="text">
+        <button class="copy-btn extend-width" (click)=(copyToClipboard(result))>Copy To Clipboard</button>
+    </section>
+</main>
